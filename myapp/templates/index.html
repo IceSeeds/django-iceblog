@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="{% static 'css/base.css' %}">
+		<title>django-iceblog-news</title>
+	</head>
+	<body>
+		{% for news in list %}
+			<ul>
+				<li><a href={{ news.1 }}>{{ news.0 }}</a></li>
+			</ul>
+		{% endfor %}
+	</body>
+</html>
